@@ -1,0 +1,8 @@
+2023-10-03 11:54:01 INFO  EmployeeRestAPI:37 - *********Started  TC002_Get_Employee  **********io.restassured.internal.RestAssuredResponseImpl@71d8cfe7
+2023-10-03 11:54:01 INFO  EmployeeRestAPI:46 - *********  Started TC002_Get_Single_employee_Record  - check Response Body  **********
+2023-10-03 11:54:01 INFO  EmployeeRestAPI:52 - *********  Started TC002_Get_Single_employee_Record  - check Response Body null
+2023-10-03 11:54:01 INFO  EmployeeRestAPI:106 - ********* finishing TC002_Get_Single_Employee_Record  **********
+2023-10-03 11:55:18 INFO  EmployeeRestAPI:29 - *********  Started TC002_Get_Single_employee_Record  **********
+2023-10-03 11:55:19 INFO  EmployeeRestAPI:37 - *********Started  TC002_Get_Employee  **********io.restassured.internal.RestAssuredResponseImpl@3d278b4d
+2023-10-03 11:55:19 INFO  EmployeeRestAPI:46 - *********  Started TC002_Get_Single_employee_Record  - check Response Body  **********
+2023-10-03 11:55:19 INFO  EmployeeRestAPI:52 - *********  Started TC002_Get_Single_employee_Record  - check Response Body null

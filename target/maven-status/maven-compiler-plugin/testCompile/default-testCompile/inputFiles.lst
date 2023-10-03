@@ -1,0 +1,7 @@
+/Users/yvonnek/javaProject/com.employeeTestApi/src/test/java/com/employeeapi/base/TestBase.java
+/Users/yvonnek/javaProject/com.employeeTestApi/src/test/java/com/employeeapi/testcases/TC002_Get_Single_Employee_Record.java
+/Users/yvonnek/javaProject/com.employeeTestApi/src/test/java/com/employeeapi/testcases/TC005_Delete_Employee_Record.java
+/Users/yvonnek/javaProject/com.employeeTestApi/src/test/java/com/employeeapi/testcases/TC004_Put_Employee_Record.java
+/Users/yvonnek/javaProject/com.employeeTestApi/src/test/java/com/employeeapi/testcases/TC001_Get_All_Employees.java
+/Users/yvonnek/javaProject/com.employeeTestApi/src/test/java/com/employeeapi/testcases/TC003_Post_Employee_Records.java
+/Users/yvonnek/javaProject/com.employeeTestApi/src/test/java/com/employeeapi/POJO/Employee.java
