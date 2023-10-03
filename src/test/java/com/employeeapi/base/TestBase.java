@@ -12,7 +12,7 @@ public class TestBase {
 	
 	public static RequestSpecification httpRequest;
 	public static Response response;
-	public String empID="10393";//Hard coded - input for get details of single employee and update employee
+	public String empID="3";//Hard coded - input for get details of single employee and update employee
 	
 	
 	public Logger logger;

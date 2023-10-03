@@ -23,7 +23,7 @@ public class TC005_Delete_Employee_Record extends TestBase {
 	void deleteEmployee() throws InterruptedException {
 		logger.info("********  Started TC005_Delete_Employee_Record **********");
 	
-		RestAssured.baseURI ="http://dummy.restapiexample.com/api/v1";
+		RestAssured.baseURI ="http://localhost:3004/";
 		httpRequest = RestAssured.given();
 		
 		response= httpRequest.request(Method.GET, "/employees");
@@ -32,12 +32,11 @@ public class TC005_Delete_Employee_Record extends TestBase {
 		JsonPath jsonPathEvaluator = response.jsonPath();
 		
 		//capture id
-		String empID =jsonPathEvaluator.get("[0].id");
-		response =httpRequest.request(Method.DELETE, "/delete/" +empID);// Pass ID to delete record
+		int empID =jsonPathEvaluator.get("[0].id");
+		System.out.println(empID);
+		response =httpRequest.request(Method.DELETE, "/employees/" +empID);// Pass ID to delete record
 		
 		Thread.sleep(3000);
-		
-	
 	}
 	
 	@Test
@@ -67,7 +66,7 @@ public class TC005_Delete_Employee_Record extends TestBase {
 	void checkContentType() {
 		logger.info("*******  Started TC005_Delete_Employee_Record -- check Content Type *******");
 		String contentType =response.header("Content-Type"); // Getting status code
-		Assert.assertEquals(contentType, "text/html; charset=UTF-8");
+		Assert.assertEquals(contentType, "application/json; charset=utf-8");
 		
 	}
 	
@@ -75,7 +74,7 @@ public class TC005_Delete_Employee_Record extends TestBase {
 	void checkServerType() {
 		logger.info("*******   TC005_Delete_Employee_Record -- check Server Type *******");
 		String serverType =response.header("Server");
-		Assert.assertEquals(serverType, "nginx/1.14.1");
+		Assert.assertEquals(serverType, null);
 		
 	}
 	
@@ -83,7 +82,7 @@ public class TC005_Delete_Employee_Record extends TestBase {
 	void checkContentEncoding() {
 		logger.info("*******  Started TC005_Delete_Employee_Record -- check Content Encoding *******");
 		String contentEncoding = response.header("Content-Encoding");
-		Assert.assertEquals(contentEncoding, "gzip");
+		Assert.assertEquals(contentEncoding, null);
 	
 	}
 	

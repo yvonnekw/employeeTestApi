@@ -1,8 +1,10 @@
-2023-10-03 11:54:01 INFO  EmployeeRestAPI:37 - *********Started  TC002_Get_Employee  **********io.restassured.internal.RestAssuredResponseImpl@71d8cfe7
-2023-10-03 11:54:01 INFO  EmployeeRestAPI:46 - *********  Started TC002_Get_Single_employee_Record  - check Response Body  **********
-2023-10-03 11:54:01 INFO  EmployeeRestAPI:52 - *********  Started TC002_Get_Single_employee_Record  - check Response Body null
-2023-10-03 11:54:01 INFO  EmployeeRestAPI:106 - ********* finishing TC002_Get_Single_Employee_Record  **********
-2023-10-03 11:55:18 INFO  EmployeeRestAPI:29 - *********  Started TC002_Get_Single_employee_Record  **********
-2023-10-03 11:55:19 INFO  EmployeeRestAPI:37 - *********Started  TC002_Get_Employee  **********io.restassured.internal.RestAssuredResponseImpl@3d278b4d
-2023-10-03 11:55:19 INFO  EmployeeRestAPI:46 - *********  Started TC002_Get_Single_employee_Record  - check Response Body  **********
-2023-10-03 11:55:19 INFO  EmployeeRestAPI:52 - *********  Started TC002_Get_Single_employee_Record  - check Response Body null
+2023-10-03 22:26:51 INFO  EmployeeRestAPI:30 - *******  Started TC003_Post_Employee_Records *******
+2023-10-03 22:26:56 INFO  EmployeeRestAPI:59 - *******  Started TC003_Post_Employee_Records -- check Respone Body *******
+2023-10-03 22:26:56 INFO  EmployeeRestAPI:111 - *******  Started TC003_Post_Employee_Records --finishing *******
+2023-10-03 22:29:27 INFO  EmployeeRestAPI:30 - *******  Started TC003_Post_Employee_Records *******
+2023-10-03 22:29:32 INFO  EmployeeRestAPI:59 - *******  Started TC003_Post_Employee_Records -- check Respone Body *******
+2023-10-03 22:29:32 INFO  EmployeeRestAPI:111 - *******  Started TC003_Post_Employee_Records --finishing *******
+2023-10-03 22:30:51 INFO  EmployeeRestAPI:30 - *******  Started TC003_Post_Employee_Records *******
+2023-10-03 22:30:56 INFO  EmployeeRestAPI:59 - *******  Started TC003_Post_Employee_Records -- check Respone Body *******
+2023-10-03 22:30:56 INFO  EmployeeRestAPI:111 - *******  Started TC003_Post_Employee_Records --finishing *******
+2023-10-03 22:32:46 INFO  EmployeeRestAPI:30 - *******  Started TC003_Post_Employee_Records *******

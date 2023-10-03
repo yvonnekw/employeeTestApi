@@ -28,12 +28,12 @@ public class TC002_Get_Single_Employee_Record extends TestBase {
 		
 		logger.info("*********  Started TC002_Get_Single_employee_Record  **********");
 		
-		RestAssured.baseURI="https://dummy.restapiexample.com/api/v1/";
+		RestAssured.baseURI="http://localhost:3004/";
 		httpRequest =RestAssured.given()
 				.header("Accept","-*/*")
 				.header("Accept-Encoding", "gzip, deflate, br");
 		response =httpRequest.request(
-						Method.GET, "/employee/"+4);
+						Method.GET, "/employees/"+3);
 		logger.info("*********Started  TC002_Get_Employee  **********"  + response);
 
 		Thread.sleep(3);
@@ -76,7 +76,7 @@ public class TC002_Get_Single_Employee_Record extends TestBase {
 	void checkContentType() {
 		logger.info("*********  Started TC002_Get_Single_Employee_Record  - check Content Type  **********");
 		String contentType= response.header("Content-Type");
-		assertEquals(contentType, "text/html; charset=UTF-8");
+		assertEquals(contentType, "application/json; charset=utf-8");
 		
 	}
 	
@@ -84,7 +84,7 @@ public class TC002_Get_Single_Employee_Record extends TestBase {
 	void checkServerType() {
 		logger.info("*********  Started TC002_Get_Single_Employee_Record  - check Server Type **********");
 		String serverType =response.header("Server");
-		assertEquals(serverType, "nginx/1.21.6");
+		assertEquals(serverType, null);
 		
 	}
 	
