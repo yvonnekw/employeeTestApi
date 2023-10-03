@@ -18,7 +18,8 @@ public class TC001_Get_All_Employees extends TestBase {
 		
 		logger.info("*********Started  TC001_Get_All_Employees  **********");
 		
-		RestAssured.baseURI="http://dummy.restapiexample.com/api/v1";
+		//RestAssured.baseURI="http://dummy.restapiexample.com/api/v1";
+		RestAssured.baseURI="http://localhost:3004/";
 		httpRequest =RestAssured.given();
 		response =httpRequest.request(Method.GET, "/employees");
 		logger.info("*********Started  TC001_Get_All_Employees  **********"  + response);
@@ -80,7 +81,7 @@ public class TC001_Get_All_Employees extends TestBase {
 		logger.info("*********Started  TC001_Get_All_Employees - checking Content Type **********");
 		String contentType=response.getContentType();
 		logger.info(" content Type is ** " + contentType);
-		Assert.assertEquals(contentType, "text/html; charset=UTF-8");
+		Assert.assertEquals(contentType, "application/json; charset=utf-8");
 		
 	}
 	
@@ -89,7 +90,7 @@ public class TC001_Get_All_Employees extends TestBase {
 		logger.info("*********Started  TC001_Get_All_Employees - checking Server Type **********");
 		String serverType=response.getHeader("Server");
 		logger.info(" server Type is ** " + serverType);
-		Assert.assertEquals(serverType, "nginx/1.14.1");
+		Assert.assertEquals(serverType, null);
 	}
 	
 	@Test
@@ -97,7 +98,7 @@ public class TC001_Get_All_Employees extends TestBase {
 		logger.info("*********Started  TC001_Get_All_Employees - checking Content Encoding **********");
 		String contentEncoding=response.getHeader("Content-Encoding");
 		logger.info(" Encoding is ** " + contentEncoding);
-		Assert.assertEquals(contentEncoding, "gzip");
+		Assert.assertEquals(contentEncoding, null);
 		
 	}
 

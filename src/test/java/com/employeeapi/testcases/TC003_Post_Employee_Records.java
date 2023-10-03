@@ -28,7 +28,7 @@ public class TC003_Post_Employee_Records extends TestBase{
 	@BeforeClass
 	void createEmployee() throws InterruptedException {
 		logger.info("*******  Started TC003_Post_Employee_Records *******");
-		RestAssured.baseURI="http://dummy.restapiexample.com/api/v1";
+		RestAssured.baseURI="http://localhost:3004/";
 		httpRequest = RestAssured.given();
 		
 		
@@ -48,7 +48,7 @@ public class TC003_Post_Employee_Records extends TestBase{
 		//Add the Json to the body of the request
 		httpRequest.body(requestParams.toJSONString());
 	
-		response =httpRequest.request(Method.POST, "/create");
+		response =httpRequest.request(Method.POST, "/employees");
 		
 		Thread.sleep(5000);
 		//give system time to verify with following test mehtods
@@ -69,7 +69,8 @@ public class TC003_Post_Employee_Records extends TestBase{
 	void checkStatusCode() {
 		logger.info("*******  Started TC003_Post_Employee_Records -- check Status Code *******");
 		int statusCode =response.getStatusCode(); //Getting status code
-		Assert.assertEquals(statusCode, 200);
+		System.out.println(statusCode);
+		Assert.assertEquals(statusCode, 201);
 		
 	}
 	
@@ -77,7 +78,7 @@ public class TC003_Post_Employee_Records extends TestBase{
 	void checkStatusLine() {
 		logger.info("*******  Started TC003_Post_Employee_Records -- check Status Line *******");
 		String statusLine = response.getStatusLine(); //Getting status line
-		Assert.assertEquals(statusLine, "HTTP/1.1 200 OK");
+		Assert.assertEquals(statusLine, "HTTP/1.1 201 Created");
 		
 	}
 	
@@ -85,7 +86,7 @@ public class TC003_Post_Employee_Records extends TestBase{
 	void checkContentType() {
 		logger.info("*******  Started TC003_Post_Employee_Records -- check Content Type *******");
 		String contentType =response.header("Content-Type"); // Getting status code
-		Assert.assertEquals(contentType, "text/html; charset=UTF-8");
+		Assert.assertEquals(contentType, "application/json; charset=utf-8");
 		
 	}
 	
@@ -93,7 +94,7 @@ public class TC003_Post_Employee_Records extends TestBase{
 	void checkServerType() {
 		logger.info("*******  Started TC003_Post_Employee_Records -- check Server Type *******");
 		String serverType =response.header("Server");
-		Assert.assertEquals(serverType, "nginx/1.14.1");
+		Assert.assertEquals(serverType, null);
 		
 	}
 	
@@ -101,7 +102,7 @@ public class TC003_Post_Employee_Records extends TestBase{
 	void checkContentEncoding() {
 		logger.info("*******  Started TC003_Post_Employee_Records -- check Content Encoding *******");
 		String contentEncoding = response.header("Content-Encoding");
-		Assert.assertEquals(contentEncoding, "gzip");
+		Assert.assertEquals(contentEncoding, null);
 	
 	}
 	

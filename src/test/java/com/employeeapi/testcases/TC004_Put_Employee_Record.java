@@ -27,7 +27,7 @@ public class TC004_Put_Employee_Record extends TestBase{
 		@BeforeClass
 		void createEmployee() throws InterruptedException {
 			logger.info("*******  Started TC003_Post_Employee_Records *******");
-			RestAssured.baseURI="http://dummy.restapiexample.com/api/v1";
+			RestAssured.baseURI="http://localhost:3004/";
 			httpRequest = RestAssured.given();
 			
 			
@@ -47,7 +47,7 @@ public class TC004_Put_Employee_Record extends TestBase{
 			//Add the Json to the body of the request
 			httpRequest.body(requestParams.toJSONString());
 		
-			response =httpRequest.request(Method.PUT, "/update/"+empID);
+			response =httpRequest.request(Method.PUT, "/employees/"+empID);
 			
 			Thread.sleep(5000);
 			//give system time to verify with following test mehtods
@@ -84,7 +84,7 @@ public class TC004_Put_Employee_Record extends TestBase{
 		void checkContentType() {
 			logger.info("*******  Started TC003_Post_Employee_Records -- check Content Type *******");
 			String contentType =response.header("Content-Type"); // Getting status code
-			Assert.assertEquals(contentType, "text/html; charset=UTF-8");
+			Assert.assertEquals(contentType, "application/json; charset=utf-8");
 			
 		}
 		
@@ -92,7 +92,7 @@ public class TC004_Put_Employee_Record extends TestBase{
 		void checkServerType() {
 			logger.info("*******  Started TC003_Post_Employee_Records -- check Server Type *******");
 			String serverType =response.header("Server");
-			Assert.assertEquals(serverType, "nginx/1.14.1");
+			Assert.assertEquals(serverType, null);
 			
 		}
 		
@@ -100,7 +100,7 @@ public class TC004_Put_Employee_Record extends TestBase{
 		void checkContentEncoding() {
 			logger.info("*******  Started TC003_Post_Employee_Records -- check Content Encoding *******");
 			String contentEncoding = response.header("Content-Encoding");
-			Assert.assertEquals(contentEncoding, "gzip");
+			Assert.assertEquals(contentEncoding, null);
 		
 		}
 		

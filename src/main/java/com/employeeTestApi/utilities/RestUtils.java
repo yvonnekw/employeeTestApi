@@ -14,7 +14,6 @@ public class RestUtils {
 	public static String empSal() {
 		String generatedString =RandomStringUtils.randomAlphabetic(5);
 		return (generatedString);
-		
 	}
 
 	public static String empAge() {
