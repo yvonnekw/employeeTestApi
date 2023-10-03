@@ -1,1 +1,5 @@
-2023-10-03 17:48:56 INFO  EmployeeRestAPI:107 - ********* finishing TC002_Get_Single_Employee_Record  **********
+2023-10-03 22:52:49 INFO  EmployeeRestAPI:79 - *******  Started TC003_Post_Employee_Records -- check Status Line *******
+2023-10-03 22:52:49 INFO  EmployeeRestAPI:111 - *******  Started TC003_Post_Employee_Records --finishing *******
+2023-10-03 22:55:34 INFO  EmployeeRestAPI:29 - *******  Started TC003_Post_Employee_Records *******
+2023-10-03 22:55:39 INFO  EmployeeRestAPI:77 - *******  Started TC003_Post_Employee_Records -- check Status Line *******
+2023-10-03 22:55:39 INFO  EmployeeRestAPI:109 - *******  Started TC003_Post_Employee_Records --finishing *******
